@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Aanmeldpagina</title>
+    <link rel="stylesheet" href="styles/style.aanmelden.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<header>
+    <img class="logo" src="images/logo%20dfds.png">
+</header>
  
- <h1>Aanmeldformulier</h1>
+ <h1>INLOGGEN</h1>
  
   <form>
    <fieldset>
    <legend>Persoonlijke informatie:</legend>
-    <label for="voornaam">Voornaam</label> <input type="text" id="voornaam">
-    <label for="tussen">Tussenvoegsel</label> <input type="text" id="tussen">
-   <label for="Achternaam">Achternaam</label>  <input type="text" id="Achternaam">
-    <label for="E-mail">E-mail</label><input type="email" placeholder="voorbeeld@gmail.com" id="E-mail">
-    <label for="Adres">Adres</label><input type="text"  placeholder="straat" id="Adres"><input type="text" placeholder="postcode"><input type="text" placeholder="huisnummer">
-    <label for="Telefoonnummer">Telefoonnummer</label> <input type="number" placeholder="06 12345678" id="Telefoonnummer">
-    <label for="Wachtwoord">Wachtwoord</label><input type="password" id="Wachtwoord">
-     <a href="">Gereed</a>
+    <label for="gebruikersnaam">Gebruikersnaam</label> <input type="text" id="voornaam" placeholder="Gebruikersnaam">
+    <label for="Wachtwoord">Wachtwoord</label><input type="password" id="Wachtwoord" placeholder="Wachtwoord">
+     
       </fieldset>
+      <a href="overzichtspagina.html">LOG IN</a>
     </form>
+    <section >
+       <a href="">Wachtwoord vergeten</a>
+        <a href="">Sign up</a>
+    </section>
 </body>
 </html>
