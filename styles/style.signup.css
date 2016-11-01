@@ -35,23 +35,57 @@ h1{
     margin: auto;
     text-align: center;
 }
-
 h1 spam{
     display: block;
     font-size: 0.8em;
 }
 
 label{
-    font-size: 1.7em;
+    font-size: 1.4em;
 }
 
 input{
     display: block;
-    font-size: 1.3em;
+    font-size: 1.2em;
+    margin-bottom: 3%;
+    border: 1px solid black;
 }
 
-form label:nth-of-type(1),input:nth-of-type(1){
-    margin-bottom: 5%;
+input:not(placeholder-shown) {
+    border: 1px solid black;
+}
+
+input:focus{
+    background-color: gainsboro;
+    
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input:valid {
+  border: 1px solid green;
+}
+
+form label:nth-of-type(5){
+    display: block;
+}
+
+.straatHuisnr{
+    display: inline;
+    width: 2em;
+}
+
+form .straatHuisnr input:nth-of-type(1){
+    width: 7.3em;
+    display: inline;
+}
+
+.hnr{
+    display: inline-block;
+    width: 4em;
+    margin-left: 1em;
 }
 
 fieldset{
@@ -65,13 +99,14 @@ form{
     margin-bottom: 9%;
     border: 0.3em solid #F6861F;
     width: 90%;
+    height: 35em;
 }
 
 legend{
     display: none;
 }
 
-.omMeer{
+.om{
     float: right;
     margin: auto;
     display: flex;
@@ -83,26 +118,30 @@ form a{
     text-decoration: none;
     color: #fff;
     background-color: #F6881F;
-    padding: 6% 15% 6% 15%;
+    padding: 0.4em 2em 0.4em 2em;
     margin: auto;
     float: right;
     width: auto;
 }
 
-form a:hover{
-    color: #002B45;
-}
-
 .vierkant{
-/*
    border-top: 2.2em inset transparent;
-   border-right: 1em solid #F6881F; 
-   display: inline;
-*/
-    border-top: 2.3em inset transparent;
    border-right: 2em solid #F6881F; 
    height: 0em;
    display: inline-block;
+}
+
+form a:hover{
+   color: #002B45;
+    
+}
+
+h2{
+    color: #fff;
+    font-size: 1.5em;
+    font-family: 'DFDS-Bold';
+    display: block;
+    width: 100%;
 }
 
 section a{
@@ -115,6 +154,7 @@ section a{
     padding: 1em 3em 1em 3em;
     margin: auto;
 }
+
 section a:hover{
     color: #002B45;
 }
@@ -136,7 +176,6 @@ section a{
         text-align: center;
     }
 
-
 @media screen and (max-width: 24em) { 
     
     section{
@@ -151,12 +190,28 @@ section a:nth-of-type(1){
     text-align: center;
     font-size: 1em;
     }
-    
+
+form input:nth-of-type(5){
+    margin-top: 3%;
+    margin-bottom: 2%;
 }
 
+form a{
+    font-size: 1.4em;
+}
 
+.vierkant{
+   border-top: 2.82em inset transparent;
+}
+
+}
 @media screen and (min-width: 40em) {  
 
+    
+    form {
+    height: 40em;
+    }
+    
     fieldset{
         text-align: center;
     }
@@ -170,6 +225,11 @@ section a:nth-of-type(1){
         max-width: 90%;
     }
     
+    form input:nth-of-type(5){
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+    
     section a{
         padding: 1em 0em;
         width: 17em;
@@ -177,16 +237,21 @@ section a:nth-of-type(1){
     }
     
     form a{
-        padding: 10% 20%;
-    }
-    
-    .vierkant{
-        border-top: 3.14em inset transparent;
-    }
+    font-size: 1.4em;
+}
+
+.vierkant{
+   border-top: 2.82em inset transparent;
+}
 
 }
 
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 50em) {
+    
+form {
+    height: 39em;
+    max-width: 40em;
+    }
     
 header{
     max-height: 4em;
@@ -195,6 +260,15 @@ header{
 .logo{
     max-width: 12em;
     }
+    
+h1{
+    font-size: 2.5em;
+    margin-top: -0.1em;
+}
+h1 spam{
+    display: block;
+    font-size: 0.8em;
+}
     
 form{
     width: 60%; 
@@ -219,12 +293,18 @@ section a:nth-of-type(1){
     }
     
     form a{
-        margin-top: 30%;
+    font-size: 1.7em;
+}
+
+.vierkant{
+   border-top: 3.33em inset transparent;
+}
+    
+    h2{
+        text-align: center;
+        
     }
     
-    .vierkant{
-        margin-top: 30%;
-    }
-
+}
     
 }
