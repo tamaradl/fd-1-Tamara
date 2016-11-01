@@ -33,7 +33,20 @@ header {
 
 .logo{
     display:inline;
-    width: 10em;
+    width: 8em;
+}
+
+header div{
+    display: inline-block;
+    float: right;
+}
+
+.search{
+    display:inline;
+    width: 2em;
+    max-height: 2em;
+    margin-top: 0.5em;
+    margin-right: 0.5em;
 }
 
 .filter{
@@ -41,6 +54,15 @@ header {
     font-family: 'DFDS-bold';
     font-size: 1em;
     float: right;
+}
+
+.filter:hover{
+    color: #F6861F;
+}
+
+.filter:active{
+    background-color: #434950;
+    
 }
 
 main{
@@ -53,12 +75,26 @@ main{
     font-size: 1.2em;
     text-align: center;
     padding-top: 1em;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
 }
 
+.inhoudweg{
+    display: none;
+    position: absolute; 
+}
+
+.inhoudvisible{
+    display: block;
+    padding: 4em 5em;
+    }
+
 .inhoudfilter h1{
-    border-bottom: 0.1em solid black;
+    margin: auto;
     text-align: center;
     font-size: 1em;
+    font-family: 'DFDS-bold';
 }
 
 .inhoudfilter li{
@@ -66,33 +102,38 @@ main{
     display: flex;
     width: 25%;
     background-color: #FFF;
+    color: #1B5786;
     padding: 0.8em;
-    font-family: 'DFDS-light';
+    font-family: 'DFDS-bold';
     margin-bottom: 2em;
-    box-shadow: 0.1em 0.3em 0.5em;
+    box-shadow: 0.01em 0.01em 0.04em;
 }
 
-inhoudsfilter, li:nth-child(1), li:nth-child(2){
+.omPN{
+    display: block;
+}
+
+.inhoudsfilter, li:nth-child(1), li:nth-child(2){
     display: inline-block;
     margin: auto;
+    flex-direction: column;
     margin-bottom: 1em;
 }
 
-inhoudsfilter, li:nth-child(4), li:nth-child(3){
+.inhoudsfilter, li:nth-child(3), li:nth-child(2){
     margin: auto;
-    flex-direction: column;
     display: inline-block; 
     margin-bottom: 1em;
 }
 
-inhoudsfilter, li:nth-child(5){
+.inhoudsfilter, li:nth-child(4){
     margin: auto;
     padding-right: 36%;
     margin-bottom: 1em;;
-    
+    max-width: 8.5em;
 }
 
-inhoudsfilter, li:nth-child(6), li:nth-child(7){
+.inhoudsfilter, li:nth-child(5), li:nth-child(6){
     display: inline-block;
     margin-right: 1em;
     margin: auto;
@@ -104,11 +145,6 @@ inhoudsfilter, li:nth-child(6), li:nth-child(7){
 .leeghartje {
     max-width: 1em;
     text-align: center;
-    
-}
-
-header section h1{
-    font-size: 2em;
 }
 
 header button{
@@ -123,35 +159,36 @@ section > h1 {
 
 article{
     border-bottom: 0.2em solid #F6861F;
-}
-
-
-.tekst{
     font-size: 1em;
 }
-
-
 
 .data {
     width: 90%;
     margin: auto;
     display: flex;
-    background-color: aquamarine; 
 }
 
 .data > *{
     flex-basis: 33%;
     text-align: center;
+    height: 4em;
 }
 
-.inhoud{
-    padding: 2em;
-    font-size: 1em;
+.inhoud {
+    font-family: "Segoe UI","Lucida Grande","Helvetica Neue",Arial,sans-serif;;
+    display: table;
+    padding: 0em 2em 2em 2em;
+    font-size: 1.2em;
+    margin-bottom: 2em;
 }
 
-.inhoudEEN{
-    padding: 2em;
-    font-size: 1em;
+.inhoudeen {
+    font-family: "Segoe UI","Lucida Grande","Helvetica Neue",Arial,sans-serif;;
+    display: table;
+    padding: 0em 2em 2em 2em;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    line-height: 1em;
 }
 
 /*article section{
@@ -164,24 +201,42 @@ article{
 */
 
 .MijnLijst{
-    font-size: 1.5em;
-    font-family: 'DFDS-light';
-    text-align: center;
+    font-size: 1.2em;
+    font-family: 'DFDS-bold';
     /*box-shadow: 0.03em 0.03em 0.5em;*/
 }
+
+#MijnLijst{
+    font-size: 1.2em;
+    font-family: 'DFDS-bold';
+    /*box-shadow: 0.03em 0.03em 0.5em;*/
+}
+
+#MijnLijst:hover{
+color: #F6881F;
+}
+
+.MijnLijst:hover{
+    color: #F6881F;    
+}
+
 
 .aantal{
     font-size: 1.5em;
     font-family: 'DFDS-light';
+    margin: 0em;
 }
 
 .woorden{
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-family: 'DFDS-light';
+    margin: 0em;
 }
 
-article > section > span:nth-child(1){
+article > section > div:nth-child(1){
     background-color: #EEF0F1;
+    text-align: center;
+    padding-right: 0.4em;
     /*border-top: 5em solid #EEF0F1;
 	border-right: 2em solid transparent;
     border-bottom: 10em solid #EEF0F1;
@@ -189,120 +244,205 @@ article > section > span:nth-child(1){
     border-left: 0em solid transparent;*/
 }
 
+.linksVierkant{
+   border-top: 4em inset transparent;
+   border-left: 3.5em solid #EEF0F1; 
+   display: inline;
+   height: 0em;
+   flex-basis: 2%;
+}
+
 section p.aantal {
     /*border-radius: 0em 0em 2em 30em;
     padding: 0.3em 0.8em 0.3em 0.8em; */   
 }
 
-article section span:nth-child(2){
+.middenLinks{
+    border-bottom: 4em inset transparent;
+   border-right: 3.5em solid #EEF0F1; 
+   display: inline;
+   height: 0em;
+   margin-left: -7em;
+}
+
+article section div:nth-child(4){
     /*border-bottom: 5em solid #EEF0F1;
 	border-left: 2em solid transparent;
 	border-right: 2em solid transparent; */
     background-color: #EEF0F1;
-    border-left: 0.3em solid #434950;
-    border-right: 0.3em solid #434950;
 }
 
-article section span:nth-child(3){
-    /*border-top: 5em solid #EEF0F1;
+.middenRechts{
+    border-bottom: 4em inset transparent;
+   border-left: 3.5em solid #EEF0F1; 
+   display: inline;
+   height: 0em;
+    margin-right: -7em;
+}
+
+
+article section .omWoorden{
+   /* border-top: 2em solid #EEF0F1;
 	border-left: 2em solid transparent;*/
-    background-color: #EEF0F1
+    background-color: #EEF0F1;
+}
+
+.rechtsVierkant{
+   border-top: 4em inset transparent;
+   border-right: 3.5em solid #EEF0F1; 
+   display: inline;
+   height: 0em;
+   flex-basis: 2%;
+    
 }
 
 .besturingsknoppen{
     font-size: 2em;
     font-family: 'DFDS-light';
     text-align: center;
-    padding-bottom: 3%;
-    padding-bottom: 0.4em solid #434950;
+    padding-bottom: 5%;
+    padding-top: 5%;
 }
 
+/*
+.besturingsknoppen:after {
+    content:'.';
+    width:2em; 
+    height:.2em;
+    background:red;
+    position: absolute;
+}
+*/
+
 .besturingsknoppen a:nth-child(1){
-    margin-right: 0.8em;
-    margin-left: 0.6em;
+    margin-right: 0.1em;
+    transition: all 0.5s;
+    xborder-bottom: 0.1em solid #434950;
 }
 
 .besturingsknoppen a:nth-child(2){
     border-right: 0.1em solid #434950;
     border-left: 0.1em solid #434950;
-    padding: 0em 1em;
+    padding: 0em 0.6em;
+    transition: all 0.5s;
 }
 
-.number, .tekst h2{
-    display: flex;
+.besturingsknoppen a:nth-child(3){
+    font-size: 0.8em;
+    margin-left: 0.1em;
+    transition: all 0.5s;
+}
+
+.is-visible{
+    border-bottom: 0.1em solid #434950;
 }
 
 .number{
-    font-size: 2.5em;
+    font-size: 1.5em;
     font-family: 'DFDS-light';
     border-right: 0.1em solid #F6861F;
-    display: table;
     padding-right: 0.3em;
     position: relative;
-}
-
-.tekst h2{
-    font-family: 'DFDS-Bold';
-    font-size: 2em; 
-    transform: translate(3.1em,0em);
-    transform: translate(0em, 0.5em);
-    display: table;
     position: relative;
-    left: 3em;
-    bottom: 1.3em;
-    margin-top: -1.5em;
+    display: inline;
+    margin-right: 7%;
 }
 
-.tekst h3{
+h1, h2, h3{
     font-family: 'DFDS-Bold';
-    font-size: 2em;   
-    transform: translate(3.1em,0em);
-    display: table;
-    position: relative;
-    left: 0em;
-    bottom: 0.3em;
-    margin-top: -2em;
+    font-size: 2em;
+    margin-top: none;
 }
 
-.tekst h4{
-    font-family: 'DFDS-Bold';
-    font-size: 2em;   
-    transform: translate(3em,-0.1em);
-    display: table;
-    position: relative;
-    left: 0em;
-    bottom: 0.2em;
-    margin-top: -2em;
+.omMeer{
+    float: right;
+    margin: auto;
+    display: flex;
 }
-
 .meer{
     /*
     border: 0.01em solid #6D6F71;
     box-shadow: 0.03em 0.03em 0.5em;
     margin: auto;
     float: right;*/
+    float: right;
+    width: auto;
     font-size: 1.1em;
     font-family: 'DFDS-Bold';
     text-decoration: none;
     color: #fff;
     background-color: #F6881F;
-    padding: 2% 10% 2% 10%;
+    padding: 6% 30% 6% 30%;
 }
 
-.inhoud {
-    font-family: "DFDS-Light";
-    display: table;
-    font-size: 1.2em;
-    margin-bottom: 2em;
+.meereen{
+    float: right;
+    width: auto;
+    font-size: 1.1em;
+    font-family: 'DFDS-Bold';
+    text-decoration: none;
+    color: #fff;
+    background-color: #F6881F;
+    padding: 6% 33% 6% 33%;
 }
 
-
-.inhoudEEN {
-    font-family: "DFDS-Light";
-    display: table;
-    font-size: 1.2em;
-    margin-bottom: 2em;    
+.meer:hover{
+    color: #002B45;
 }
+
+.meereen:hover{
+    color: #002B45;    
+}
+
+.vierkant{
+   border-top: 2.2em inset transparent;
+   border-right: 1em solid #F6881F; 
+   display: inline;
+}
+
+.vierkantrechts{
+    visibility: hidden;
+    position: absolute;
+}
+
+.vierkantrechts{
+    visibility: hidden;
+    position: absolute;
+}
+
+.tel{
+    max-width: 100%;
+}
+
+.ipad {
+    visibility: hidden;
+    position: absolute;
+}
+
+.tussen{
+    visibility: hidden;
+    position: absolute;
+}
+
+.com{
+    visibility: hidden;
+    position: absolute;
+}
+
+.westerntel{
+    max-width: 100%;
+}
+
+.westernipad{
+    visibility: hidden;
+    position: absolute;
+}
+
+.westerncom{
+    visibility: hidden;
+    position: absolute;
+}
+
 
 /*  Voor Ipad   */
 
@@ -313,14 +453,13 @@ article section span:nth-child(3){
     margin-left: 2%;
     }
     
-.inhoudfilter{
-    visibility: hidden;
-    position: absolute;
-    }
     
 .besturingsknoppen{
     font-size: 2.3em;
     margin-bottom: -0.8em;
+    margin-top: 1em;
+    padding-bottom: 0%;
+    padding-top: 0%;
 }
      
 header{
@@ -338,58 +477,8 @@ header{
     max-width: 1.7em;
     }
     
-    
-/*article section{
-    border-top: none;
-    display: flex;
-    flex-direction: column;
-    float: right;
-    font-size: 1.5em;
-    margin: auto;
-    }
-    
-.MijnLijst{
-    font-size: 1.5em;
-    color: #fff;
-    font-family: 'DFDS-light';
-    text-align: center;
-}
-
-.aantal{
-    position: absolute;
-}
-
-article > section > span:nth-child(1){
-    border-top: 5em solid #6D6F71;
-    border-left: 0em solid transparent;
-    border-right: 0em solid transparent;
-}
-
-section p.aantal {
-    font-family: 'DFDS-light';
-    color: #fff;
-}
-
-.woorden{
-    font-family: 'DFDS-light';
-    text-align: center;
-    color: white;
-}
-
-article section span:nth-child(2){
-    border-bottom: 10em solid #6D6F71;
-	border-left: 0em solid transparent;
-	border-right: 0em solid transparent;
-}
-    
-article section span:nth-child(3){
-    border-top: 10em solid #6D6F71;
-	border-left: 0em solid transparent;
-    }
-    
-    */
-    
 article{
+    border-top: 0.2em solid #F6861F;
     background-color: #EEF0F1;
     max-width: 100%;
     margin-top: 3em;
@@ -399,23 +488,31 @@ article{
     }
     
 .inhoud{
-    max-width: 40em;
     font-size: 1.5em;
-    padding-top: 0em;
+    padding-right: 0em;
+    padding-left: 1em;
+    max-width: 30em;
     }
     
-.inhoudEEN{
-    padding-top: 0em;
-    font-size: 1.4em;
+.teksteen{
+     height: 30em;
     }
     
 .number{
     border: none;
     margin-top: 0.2em;
+    border-right: 0.1em solid #F6861F;
 }
     
+.omMeer{
+    float: left;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-height: 3em;
+    }
+    
 .meer{
-    float: right;
     width: auto;
     text-align: center;
     font-size: 1.1em;
@@ -423,22 +520,66 @@ article{
     text-decoration: none;
     color: #fff;
     background-color: #F6881F;
-    padding: 2% 10% 2% 10%;
+    }
+    
+.meereen{
+    width: auto;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: 'DFDS-Bold';
+    text-decoration: none;
+    color: #fff;
+    background-color: #F6881F;
+    padding: 10% 30% 10% 30%;
+    }
+    
+.vierkant{
+    visibility: hidden;
+    position: absolute;
+    }
+    
+.vierkantrechts{
+    visibility: visible;
+    border-top: 1.87em inset transparent;
+    border-left: 1em solid #F6881F; 
+    margin-left: 4.6em;
+    }
+    
+    .vierkantrechtsboven{
+    border-top: 1.87em inset transparent;
+    border-left: 1em solid #F6881F; 
+    visibility: visible;
+    margin-left: 4em;
+    }
+    
+.vierkantrechtseen{
+/*
+    visibility: visible;
+    border-top: 1.87em inset transparent;
+    border-left: 1em solid #F6881F; 
+    transform: translate(7.2em, -1.83em);
+*/
+    visibility: visible;
+    border-top: 2em inset transparent;
+    border-left: 1em solid #F6881F; 
+    transform: translate(5.45em, -1.93em);
+    
     }
     
 .data{
-        float: right;
-        flex-direction: column;
-        width: auto;
-        border: none;
-        color: #fff;
-        width: 20%;
+    float: right;
+    flex-direction: column;
+    width: auto;
+    border: none;
+    color: #fff;
+    width: 20%;
     }
     
-article > section > span:nth-child(1){
-    background-color: #6D6F71;
-    padding-bottom: 20%;
-    padding-top: 20%;
+article > section > div:nth-child(1){
+    background-color: #fff;
+    color: #1b5786;
+    height: 8em;
+    border-right: 0.3em solid #F6861F;
     /*border-top: 5em solid #EEF0F1;
 	border-right: 2em solid transparent;
     border-bottom: 10em solid #EEF0F1;
@@ -446,30 +587,73 @@ article > section > span:nth-child(1){
     border-left: 0em solid transparent;*/
 }
 
-article section span:nth-child(2){
-    /*border-bottom: 5em solid #EEF0F1;
-	border-left: 2em solid transparent;
-	border-right: 2em solid transparent; */
-    background-color: #6D6F71;
-    border-top: 0.3em solid #85BCE9;
-    border-bottom: 0.3em solid #85BCE9;
-    border-right: none;
+article section div:nth-child(4){
+    background-color: #fff;
+    border-right: 0.3em solid #F6861F;
+    color: #1b5786;
     border-left: none;
-    height: 30%;
+    height: 8em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
-article section span:nth-child(3){
-    /*border-top: 5em solid #EEF0F1;
-	border-left: 2em solid transparent;*/
-    background-color: #6D6F71;
-    height: 30%;
+    
+.linksVierkant, .middenLinks, .middenRechts, .rechtsVierkant {
+    visibility: hidden;
+    position: absolute;
 }
     
-.besturingsknoppen{
-    margin-top: 1em;
+#MijnLijst{
+    font-size: 1.9em;
     }
+
+.aantal{
+    font-size: 1.5em;
+}
+
+.woorden{
+    margin: 0em; 
+    font-size: 1.5em;
+    }
+
+article section .omWoorden{
+    /*border-top: 5em solid #EEF0F1;
+	border-left: 2em solid transparent;
+    background-color: #6D6F71;*/
+    background-color: #fff;
+    color: #1b5786;
+    border-right: 0.3em solid #F6861F;
+    height: 8em;
+    text-align: center;
+}    
     
 }
+
+/*voor de verhalen voor ipad*/
+@media screen and (min-width: 27em) {
+    
+.tel{
+    visibility: hidden;
+    position: absolute;
+}
+    
+.ipad{
+    visibility: visible;
+    width: 100%;
+}
+    
+.westerntel{
+    visibility: hidden;
+    position: absolute;    
+}
+    
+.westernipad{
+    visibility: visible;
+    width: 100%;
+}
+
+}
+
 
 /* Voor desktop */
 
@@ -483,7 +667,14 @@ article section span:nth-child(3){
     font-size: 1em;
     max-width: 22%;
     margin-top: 6em;
-
+    }
+    
+.Tweeinhoudfilter li:nth-child(5){
+    max-width: 5em;
+    }
+    
+.inhoudfilter{
+    display: none; 
     }
     
 ul{
@@ -491,7 +682,6 @@ ul{
     }
 
 .Tweeinhoudfilter h1{
-    border-bottom: 0.1em solid #fff;
     text-align: center;
     font-size: 1.4em;
     color: #fff;
@@ -502,8 +692,9 @@ ul{
     display: flex;
     width: 30%;
     background-color: #FFF;
+    color: #1b5786;
     padding: 0.8em;
-    font-family: 'DFDS-light';
+    font-family: 'DFDS-bold';
     margin-bottom: 2em;
     margin: auto;
 }
@@ -536,8 +727,7 @@ Tweeinhoudsfilter, li:nth-child(6), li:nth-child(7){
     background-color: #002B45;
     color: #FFF;
     border: 0.1em solid #85BCE9;
-}
-    
+}    
 
 .filter{
     visibility: hidden; 
@@ -549,8 +739,64 @@ article{
     margin-top: 3em;
     margin-left: 24%;
     }
+    
+.teksteen{
+       height: 30em;
+    }
 
 .inhoud{
-       max-width: 40em; 
+    max-width: 40em; 
+    width: 62%;
+    padding-left: 2em;
     }
+    
+.inhoudeen{
+    max-width: 40em; 
+    width: 62%;
+    padding-left: 2em;
+    }
+
 }
+
+/*voor de drie verhalen, tussen computer en desktop*/
+@media screen and (min-width: 40em) {
+    
+.ipad{
+    visibility: hidden;
+    width: 100%;
+}
+    
+.tussen{
+    visibility: visible;
+    width: 100%; 
+    }
+
+
+}
+
+
+/*voor de drie verhalen, computer versie*/
+@media screen and (min-width: 75em) {
+    
+.tussen{
+    visibility: hidden;
+    width: 100%;
+}
+    
+.com{
+    visibility: visible;
+    width: 100%;
+    }
+
+.westernipad{
+    visibility: hidden;
+    width: 100%;
+    }
+    
+.westerncom{
+    visibility: visible;
+    width: 100%;
+    }
+    
+}
+
